@@ -1,8 +1,18 @@
 ---
 ---
+1
 
-
-{% capture langname %}{% for i in (1..1024) %}x{% endfor %}{% endcapture %}
-{% capture langname %}{% for i in (1..1024) %}{{langname}}{% endfor %}{% endcapture %}
+{% comment %} 1k {% endcomment %} {% capture langname %}{% for i in (1..1024) %}x{% endfor %}{% endcapture %}
+{% comment %} 1M {% endcomment %} {% capture langname %}{% for i in (1..1024) %}{{langname}}{% endfor %}{% endcapture %}
+{% comment %} 2M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 4M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 8M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 16M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 32M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 64M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 128M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 256M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 512M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
+{% comment %} 1024M {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
 
 length: {{ langname | size }}
