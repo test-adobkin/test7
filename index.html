@@ -1,1 +1,8 @@
-hello
+---
+---
+
+
+{% capture langname %}{% for i in (1..1024) %}x{% endfor %}{% endcapture %}
+{% capture langname %}{% for i in (1..1024) %}{{langname}}{% endfor %}{% endcapture %}
+
+length: {{ langname | size }}
