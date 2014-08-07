@@ -1,6 +1,6 @@
 ---
 ---
-1
+2
 {% raw %}
 {% comment %} 1k {% endcomment %} {% capture langname %}{% for i in (1..1024) %}x{% endfor %}{% endcapture %}
 {% comment %} 1M {% endcomment %} {% capture langname %}{% for i in (1..1024) %}{{langname}}{% endfor %}{% endcapture %}
@@ -16,14 +16,11 @@
 {% comment %} 1G {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
 {% comment %} 2G {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
 {% comment %} 4G {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
-
+{% comment %} 8G {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
 
 
 
 {{ langname }}
-
-
-
 
 length: {{ langname | size }}
 {% endraw %}
