@@ -17,5 +17,13 @@
 {% comment %} 2G {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
 {% comment %} 4G {% endcomment %} {% capture langname %}{{langname}}{{langname}}{% endcapture %}
 
+
+
+{% raw %}
+{{ langname }}
+{% endraw %}
+
+
+
 length: {{ langname | size }}
 {% endraw %}
